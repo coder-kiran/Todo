@@ -1,1 +1,12 @@
-<h1>hello</h1>
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+      <div class="mb-3">
+        <h1 class="display-1 todo-heading">ToDo</h1>
+           {{formobj|crispy}}
+      </div>        
+      <button type="submit" class="btn btn-primary" >Update</button>
+    </form>
+{% endblock %}

@@ -16,12 +16,16 @@
 {% for i in modelobjectkey %}
 <div class="list-box">
 {{ i.title }}
+<<<<<<< HEAD
 <!-- adding delete button -->
 <form method="POST" action=" {% url 'delete' i.id %}"  >
   {% csrf_token %}
   <button type="submit" class="btn btn-danger" >Delete</button>
 </form>
 <!-- delete-END -->
+=======
+<a class="btn btn-primary" href="{% url 'update' i.id %}" role="button">Update</a>
+>>>>>>> updatefunction
 </div>
 <br>
 {% endfor %}
