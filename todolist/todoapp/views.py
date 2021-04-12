@@ -15,4 +15,7 @@ def index(request):
 
     return render(request,'home.html',{'formkey':formobj,'modelobjectkey':modelobject})
 
-    
+def deletelist(request,commonid):
+    if request.method == 'POST':
+        TodoModel.objects.get(id=commonid).delete()
+        return redirect('home')

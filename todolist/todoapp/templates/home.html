@@ -8,7 +8,7 @@
       <h1 class="display-1 todo-heading">ToDo</h1>
          {{formkey|crispy}}
     </div>        
-    <button type="submit" class="btn btn-primary" action=" {% url 'home' %}">Submit</button>
+    <button type="submit" class="btn btn-primary btn-submit" action=" {% url 'home' %}">Submit</button>
   </form>
 
 <!-- Showing output of list inside div using for loop -->
@@ -16,6 +16,12 @@
 {% for i in modelobjectkey %}
 <div class="list-box">
 {{ i.title }}
+<!-- adding delete button -->
+<form method="POST" action=" {% url 'delete' i.id %}"  >
+  {% csrf_token %}
+  <button type="submit" class="btn btn-danger" >Delete</button>
+</form>
+<!-- delete-END -->
 </div>
 <br>
 {% endfor %}
