@@ -15,4 +15,5 @@ def index(request):
 
     return render(request,'home.html',{'formkey':formobj,'modelobjectkey':modelobject})
 
+def update(request,commonid):
     
