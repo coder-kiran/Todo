@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+{% block content %}
+<div class="container">
+<form method="POST">
+  {% csrf_token %}
+    <div class="mb-3">
+      <h1 class="display-1 todo-heading">ToDo</h1>
+         {{formkey|crispy}}
+    </div>        
+    <button type="submit" class="btn btn-primary" action=" {% url 'home' %}">Submit</button>
+  </form>
+
+<!-- Showing output of list inside div using for loop -->
+<br>
+{% for i in modelobjectkey %}
+<div class="list-box">
+{{ i.title }}
+</div>
+<br>
+{% endfor %}
+
+
+<!-- END -->
+</div>
+{% endblock %}

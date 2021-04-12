@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'todoapp.apps.TodoappConfig'
+    'todoapp.apps.TodoappConfig',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'todoapp/static')
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

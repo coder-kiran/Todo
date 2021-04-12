@@ -1,3 +1,23 @@
-*{
-    background: green;
+body{
+    background: rgb(230, 149, 27) ;
+    
+}
+h1{
+    font-family: fantasy;
+    color: #fff;
+}
+.todo-heading{
+   text-align: center; 
+}
+
+.list-box{
+    background: #fff;
+    color: rgb(230, 149, 27);
+    width: 100%;
+    height: 100px;
+}
+.btn{
+    background-color: rgb(126,73,4);
+    border: none;
+    width: 100%;
 }
