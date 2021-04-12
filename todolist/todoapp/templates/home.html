@@ -16,6 +16,7 @@
 {% for i in modelobjectkey %}
 <div class="list-box">
 {{ i.title }}
+<a class="btn btn-primary" href="{% url 'update' i.id %}" role="button">Update</a>
 </div>
 <br>
 {% endfor %}

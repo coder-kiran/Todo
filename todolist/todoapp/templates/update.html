@@ -5,8 +5,8 @@
     {% csrf_token %}
       <div class="mb-3">
         <h1 class="display-1 todo-heading">ToDo</h1>
-           {{formkey|crispy}}
+           {{formobj|crispy}}
       </div>        
-      <button type="submit" class="btn btn-primary" action=" {% url 'update' %}">Update</button>
+      <button type="submit" class="btn btn-primary" >Update</button>
     </form>
 {% endblock %}
