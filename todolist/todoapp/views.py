@@ -15,4 +15,7 @@ def index(request):
 
     return render(request,'home.html',{'formkey':formobj,'modelobjectkey':modelobject})
 
-    
+def deletelist(request,commonid):
+    formobj = TodoForm(instance=commonid)
+    TodoModel.objects.delete(formobj)
+    return redirect('home')
