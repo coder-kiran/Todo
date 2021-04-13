@@ -15,12 +15,12 @@ def index(request):
 
     return render(request,'home.html',{'formkey':formobj,'modelobjectkey':modelobject})
 
-<<<<<<< HEAD
+
 def deletelist(request,commonid):
     if request.method == 'POST':
         TodoModel.objects.get(id=commonid).delete()
         return redirect('home')
-=======
+
 def update(request,commonid):
     modelobj = TodoModel.objects.get(id=commonid)
     formobj = TodoForm(instance=modelobj)
@@ -35,4 +35,3 @@ def update(request,commonid):
     
 
     
->>>>>>> updatefunction

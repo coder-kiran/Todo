@@ -15,17 +15,23 @@
 <br>
 {% for i in modelobjectkey %}
 <div class="list-box">
+<div class="btn-title">
 {{ i.title }}
-<<<<<<< HEAD
+</div>
+
 <!-- adding delete button -->
-<form method="POST" action=" {% url 'delete' i.id %}"  >
-  {% csrf_token %}
-  <button type="submit" class="btn btn-danger" >Delete</button>
-</form>
-<!-- delete-END -->
-=======
-<a class="btn btn-primary" href="{% url 'update' i.id %}" role="button">Update</a>
->>>>>>> updatefunction
+<div class="btn-saver">
+  <div class="listbox-update">
+    <a class="btn btn-primary btn-update" href="{% url 'update' i.id %}" role="button">Update</a>
+    </div>
+  <div class="listbox-del">
+  <form method="POST" action=" {% url 'delete' i.id %}"  >
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger" >Delete</button>
+  </form>
+  </div>
+  <!-- delete-END --> 
+</div>
 </div>
 <br>
 {% endfor %}
